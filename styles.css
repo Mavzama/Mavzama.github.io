@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+header {
+  background-color: #6e297f;
+  padding: 15px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #a47db8;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #a47db8;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* styling the header just for the projects */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #6e297f; 
+}
+
+.project-header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #a47db8;
+  margin: 0;
+}
+
+.project-header img {
+  max-height: 80px;
+  height: auto;
+  width: auto;
+}
+
+/* styling the images for the projects */
+.halfcolumn {
+  flex: 1 1 calc(50% - 30px); 
+  max-width: 400px; /* This size works for a decent size and be able to accomodate a couple together */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.halfcolumn img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* this class just for the first image an each project page to show my work in detail */
+.fullwidth {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.fullwidth img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.list {
+  margin-top: 20px;
+  list-style-type: decimal;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-list a {
+  color: #a47db8;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.contact-list a:hover {
+  color: #6e297f;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+.back-home-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.back-home {
+  max-width: 250px; /*image size*/
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.back-home-link span {
+  color: #a47db8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.back-home-link:hover .back-home {
+  transform: scale(1.05);
+}
+
+.back-home-link:hover span {
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  /* smaller screen content will stack vertically */
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* For screens 900px or smaller this will show all project images scale */
+  .fullwidth,
+  .halfcolumn {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* another size */
+  
+  /* No hover for the "Back to Home" image on mobile */
+  .back-home-link span {
+    opacity: 1;
+  }
+}
