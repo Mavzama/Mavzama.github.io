@@ -12,14 +12,32 @@ html, body {
 }
 
 header {
-  background-color: #6e297f;
-  padding: 15px 0;
+ background-color: #6e297f;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.center-logo {
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+
+.home-hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-hero img {
+  max-width: 80%; 
+  height: auto;
+  display: inline-block;
 }
 
 nav a {
