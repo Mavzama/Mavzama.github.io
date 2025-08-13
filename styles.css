@@ -10,7 +10,7 @@ html, body {
   background-color: black;
   color: white;
 }
-
+/* I used my own palets of colors for my personal brand */
 header {
  background-color: #6e297f;
   padding: 20px 0;
@@ -28,7 +28,7 @@ header {
   justify-content: center;
   gap: 40px;
 }
-
+/* I asked chatgpt how I could mantained my logo center as it was all over the place in my header so it created another class */
 .home-hero {
   text-align: center;
   margin: 20px 0;
@@ -56,6 +56,7 @@ nav a:hover {
   text-align: center;
 }
 
+/* Also I selected the typeface for my brand */
 h1 {
   font-family: 'Lobster', cursive;
   color: #a47db8;
@@ -115,7 +116,7 @@ p {
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-/* this class just for the first image an each project page to show my work in detail */
+/* this class just for the first image an each project page to show my work in detail. This was also a question for chat gpt as at the beggining this was also small */
 .fullwidth {
   flex: 1 1 100%;
   max-width: 100%;
@@ -167,7 +168,7 @@ footer {
   align-items: center;
   text-decoration: none;
 }
-
+/* a bit of animation for the back home button */
 .back-home {
   max-width: 250px; /*image size*/
   height: auto;
@@ -208,10 +209,18 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  /* another size */
-  
   /* No hover for the "Back to Home" image on mobile */
   .back-home-link span {
     opacity: 1;
+  }
+
+  /* Adjust logo size as it was super big for smaller windows*/
+  .center-logo {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .center-logo {
+    max-width: 250px;
   }
 }
